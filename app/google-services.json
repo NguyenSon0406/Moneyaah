@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "217841690083",
+    "project_id": "moneyaah-system",
+    "storage_bucket": "moneyaah-system.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:217841690083:android:3b829d22d41e1848d92cd6",
+        "android_client_info": {
+          "package_name": "com.example.moneyaah_system"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "217841690083-0odbm713m6snt3i182n7u3sppk6o33l8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXb-_w271dNTCxs0gKb50aVzCSVzfoEow"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "217841690083-0odbm713m6snt3i182n7u3sppk6o33l8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

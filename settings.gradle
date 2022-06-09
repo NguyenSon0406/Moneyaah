@@ -1,0 +1,2 @@
+rootProject.name = "Moneyaah_System"
+include ':app'
