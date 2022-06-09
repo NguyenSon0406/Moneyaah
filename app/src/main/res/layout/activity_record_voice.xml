@@ -4,6 +4,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecordVoice">
+    android:background="@color/white"
+    android:foregroundTint="#F3F0F0"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/rounder_corner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="350dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="68dp"
+
+        android:foreground="@drawable/rounder_corner2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="92dp"
+        android:text="Good morning!"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <TextView
+        android:id="@+id/txt_TextRec"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/montserrat"
+        android:inputType="textMultiLine"
+        android:text="Press and hold to say"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2"></TextView>
+
+    <ImageButton
+        android:id="@+id/btn_record"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="548dp"
+        android:backgroundTint="@color/white"
+        android:scaleType="centerInside"
+        android:src="@drawable/voice_record"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageButton>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="36dp"
+        android:text="Lưu"
+        android:backgroundTint="#D6D1D1"
+        android:textColor="#009688"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_record"
+        app:layout_constraintEnd_toEndOf="@+id/textView2" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
