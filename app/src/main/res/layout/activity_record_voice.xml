@@ -15,7 +15,12 @@
         android:background="@drawable/rounder_corner"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></TextView>
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+    </FrameLayout>
     <TextView
         android:id="@+id/textView2"
         android:layout_width="350dp"
@@ -46,7 +51,7 @@
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/montserrat"
         android:inputType="textMultiLine"
-        android:text="Press and hold to say"
+        android:text="Mua 2 con cá hết 40000đ mỗi con 20000đ"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="28sp"

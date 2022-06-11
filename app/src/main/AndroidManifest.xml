@@ -11,8 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Moneyaah_System">
-        <activity android:name=".RecordVoice"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".screens.NoteScreen"/>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".RecordVoice">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

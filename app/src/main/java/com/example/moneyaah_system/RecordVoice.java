@@ -6,9 +6,12 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.Fragment;
 
 import android.Manifest;
 import android.app.AlertDialog;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -20,7 +23,12 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.moneyaah_system.fragment.ExspenseFragment;
+import com.example.moneyaah_system.fragment.IncomeFragment;
+import com.example.moneyaah_system.screens.NoteScreen;
+
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 public class RecordVoice extends AppCompatActivity {
@@ -28,6 +36,7 @@ public class RecordVoice extends AppCompatActivity {
     ImageButton menu;
     TextView txt_textRec;
     Button btn_Save;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,11 +107,28 @@ public class RecordVoice extends AppCompatActivity {
         builder.setTitle("Thông báo").setMessage("Bạn có chắc muốn lưu "+txt_textRec.getText().toString()+ " không ?");
         builder.setCancelable(true);
         builder.setPositiveButton("Đồng ý", new DialogInterface.OnClickListener() {
+
+
             @Override
             public void onClick(DialogInterface dialog, int which) {
+                String getNumber = ""+SplitNumber(txt_textRec.getText().toString());
+                String voiceText = txt_textRec.getText().toString();
 
-                txt_textRec.setText(""+SplitNumber(txt_textRec.getText().toString()));
+                Intent myIntent = new Intent(RecordVoice.this, NoteScreen.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("money",getNumber);
+                bundle.putString("note",voiceText);
+                myIntent.putExtras(bundle);
+                startActivity(myIntent);
+//                ExspenseFragment expenseFrag = new ExspenseFragment();
+////                viewpageAdapter.getItem(1).setArguments(bundle);
+//                androidx.fragment.app.FragmentTransaction fragTransaction = getSupportFragmentManager().beginTransaction();
+//                expenseFrag.setArguments(bundle);
+//                fragTransaction.replace(R.id.container, expenseFrag).commit();
 
+//                IncomeFragment incomeFrag = new IncomeFragment();
+//                incomeFrag.setArguments(bundle);
+//                fragTransaction.replace(R.id.container,incomeFrag).commit();
             }
         });
         builder.setNeutralButton("Hủy", new DialogInterface.OnClickListener() {
@@ -135,10 +161,10 @@ public class RecordVoice extends AppCompatActivity {
                         tam=num;
                 }
             }catch (NumberFormatException e){
-
             }
-
         }
         return tam;
     }
+//ham noteScreen tra ve intent
+
 }
