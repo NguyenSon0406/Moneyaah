@@ -46,7 +46,7 @@
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/montserrat"
         android:inputType="textMultiLine"
-        android:text="Press and hold to say"
+        android:text="Mua 2 con cá hết 40000đ mỗi con 20000đ"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="28sp"
