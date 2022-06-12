@@ -22,14 +22,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        switch (position){
-            case 0:
-                return new IncomeFragment();
-            case 1:
-                return new ExspenseFragment();
-            default:
-                return new IncomeFragment();
-        }
+        return listFragment.get(position);
     }
 
     @Override
@@ -40,17 +33,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        String title = "";
-        switch (position){
-            case 0:
-                title = "Income";
-                break;
-            case 1:
-                title = "Expense";
-                break;
-
-        }
-        return title;
+        return listTitle.get(position);
     }
     public void AddFragment (Fragment fragment, String title){
         listFragment.add(fragment);

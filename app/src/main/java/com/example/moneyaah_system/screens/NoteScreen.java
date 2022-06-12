@@ -22,7 +22,6 @@ import java.util.List;
 public class NoteScreen extends AppCompatActivity {
     private TabLayout mtabLayout;
     private ViewPager mviewPager;
-    EditText edt_money, edt_note;
     ViewPagerAdapter viewPagerAdapter;
 
     @Override
@@ -32,23 +31,24 @@ public class NoteScreen extends AppCompatActivity {
 
         mtabLayout = findViewById(R.id.tabLayout);
         mviewPager = findViewById(R.id.viewpager);
-        edt_money = findViewById(R.id.txt_money);
-        edt_note = findViewById(R.id.txt_note);
-        Bundle extras = this.getIntent().getExtras();
-        String getMoney = extras.getString("money");
-        String getNote = extras.getString("note");
+
 
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        FragmentTransaction fragTransaction = getSupportFragmentManager().beginTransaction();
 
-        Bundle bundle = new Bundle();
-        bundle.putString("money",getMoney);
-        bundle.putString("note",getNote);
-        IncomeFragment incomeFrag = new IncomeFragment();
-        incomeFrag.setArguments(bundle);
-
+        Bundle extras = this.getIntent().getExtras();
+        Bundle bundle= new Bundle();;
         ExspenseFragment expenseFragment = new ExspenseFragment();
-        expenseFragment.setArguments(bundle);
+        IncomeFragment incomeFrag = new IncomeFragment();
+        if( extras !=null ) {
+            String getMoney = extras.getString("money");
+            String getNote = extras.getString("note");
+            bundle.putString("money",getMoney);
+            bundle.putString("note",getNote);
+            incomeFrag.setArguments(bundle);
+            expenseFragment.setArguments(bundle);
+        }
+
+
 
         viewPagerAdapter.AddFragment(incomeFrag,"INCOME");
         viewPagerAdapter.AddFragment(expenseFragment,"EXPENSE");

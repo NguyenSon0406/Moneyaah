@@ -15,12 +15,7 @@
         android:background="@drawable/rounder_corner"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></TextView>
-    <FrameLayout
-        android:id="@+id/container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-    </FrameLayout>
     <TextView
         android:id="@+id/textView2"
         android:layout_width="350dp"

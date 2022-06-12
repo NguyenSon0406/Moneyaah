@@ -48,10 +48,10 @@ public class ExspenseFragment extends Fragment {
         {
             getMoney =data.getString("money").toString();
             getNote = data.getString("note").toString();
-
+            edt_note.setText(""+getNote);
+            edt_money.setText(getMoney);
         }
-        edt_note.setText(""+getNote);
-        edt_money.setText(getMoney);
+
 
 
         selectDate.setOnClickListener(new View.OnClickListener() {

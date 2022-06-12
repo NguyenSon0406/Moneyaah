@@ -47,10 +47,10 @@ public class IncomeFragment extends Fragment {
         {
             getMoney =data.getString("money").toString();
             getNote = data.getString("note").toString();
-
+            edt_note.setText(""+getNote);
+            edt_money.setText(getMoney);
         }
-        edt_note.setText(""+getNote);
-        edt_money.setText(getMoney);
+
 //        Intent myIntent = getActivity().getIntent();
 //        String getMoney = myIntent.getStringExtra("money");
 //        String getNote = myIntent.getStringExtra("note");
